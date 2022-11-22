@@ -11,3 +11,76 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  text-decoration: none;
+  color: #7C8DB0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin-left: 40px;
+}
+
+.header-nav {
+  padding: 0 40px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-link {
+  color: #605DEC;
+  font-size: 30px;
+}
+
+.active-home-link {
+  font-weight: bold;
+  color: #605DEC;
+  font-size: 30px;
+}
+
+.active {
+  color: #605DEC;
+}
+
+
+.wrapper {
+  height: 700px;
+  background-image: url(./img/map.png);
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 90px;
+  width: 750px;
+  text-align: center;
+  margin-top: 90px;
+  background: -webkit-linear-gradient(125.13deg, #605DEC 46.01%, #C08FFE 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  height: 40px;
+}
+
+.user-link {
+  color: #605DEC;
+  border: 1px solid #605DEC;
+  padding: 3px 9px;
+}

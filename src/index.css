@@ -84,3 +84,50 @@ td {
   border: 1px solid #605DEC;
   padding: 3px 9px;
 }
+
+.user-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.user-heading {
+  font-size: 24px;
+  color: #6E7491;
+  line-height: 33px;
+}
+
+.user-details {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 10px;
+  color: #6E7491;
+}
+
+.back-link {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #605DEC;
+}
+
+.error-box {
+  width: 50%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.error-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.error-code {
+  font-size: 36px;
+  font-weight: 600;
+}

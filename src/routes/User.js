@@ -19,15 +19,19 @@ const User = () => {
   }
 
   return (
-    <div>
-      <Link to="/users">Show all users</Link>
-      <h3>
-        {user.firstName} {user.lastName}
-      </h3>
+    <div className="user-box">
       <img src={user.image} alt={user.firstName}></img>
-      <span>age: {user.age}</span>
-      <span>height: {user.height}</span>
-      <span>weight: {user.weight}</span>
+      <div className="user-info">
+        <h3 className="user-heading">
+          {user.firstName} {user.lastName}
+        </h3>
+        <span className="user-details">age: {user.age}</span>
+        <span className="user-details">height: {user.height}</span>
+        <span className="user-details">weight: {user.weight}</span>
+        <Link to="/users" className="back-link">
+          Show all users
+        </Link>
+      </div>
     </div>
   );
 };

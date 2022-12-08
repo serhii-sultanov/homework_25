@@ -16,19 +16,6 @@ const AuthProvider = ({ children }) => {
     return null;
   });
 
-  const loginUser = async (credentials) => {
-    const user = await login(credentials);
-    setUserInfo(user);
-    setLoggedIn(true);
-    localStorage.setItem("userInfo", JSON.stringify(user));
-  };
-
-  const logoutUser = () => {
-    setUserInfo(null);
-    setLoggedIn(false);
-    localStorage.removeItem("userInfo");
-  };
-
   const [isShownLoginForm, setShownLoginForm] = useState(false);
 
   const showLoginForm = () => {
@@ -37,6 +24,20 @@ const AuthProvider = ({ children }) => {
 
   const closeLoginForm = () => {
     setShownLoginForm(false);
+  };
+
+  const loginUser = async (credentials) => {
+    const user = await login(credentials);
+    setUserInfo(user);
+    setLoggedIn(true);
+    setShownLoginForm(false);
+    localStorage.setItem("userInfo", JSON.stringify(user));
+  };
+
+  const logoutUser = () => {
+    setUserInfo(null);
+    setLoggedIn(false);
+    localStorage.removeItem("userInfo");
   };
 
   return (

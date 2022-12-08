@@ -143,3 +143,22 @@ td {
 img {
   width: 100%;
 }
+
+.login-form {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 580px;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.close-button {
+  position: absolute;
+  right: 45px;
+  top: 45px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}

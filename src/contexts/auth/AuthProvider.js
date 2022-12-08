@@ -29,13 +29,26 @@ const AuthProvider = ({ children }) => {
     localStorage.removeItem("userInfo");
   };
 
+  const [isShownLoginForm, setShownLoginForm] = useState(false);
+
+  const showLoginForm = () => {
+    setShownLoginForm(true);
+  };
+
+  const closeLoginForm = () => {
+    setShownLoginForm(false);
+  };
+
   return (
     <AuthContext.Provider
       value={{
         isLoggedIn,
+        isShownLoginForm,
         userInfo,
         loginUser,
         logoutUser,
+        showLoginForm,
+        closeLoginForm,
       }}
     >
       {children}

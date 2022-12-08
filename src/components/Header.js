@@ -5,8 +5,11 @@ import AuthContext from "../contexts/auth/AuthContext";
 
 import Button from "@mui/material/Button";
 
+import LoginForm from "./LoginForm";
+
 const Header = () => {
-  const { isLoggedIn, logoutUser, userInfo } = useContext(AuthContext);
+  const { isLoggedIn, logoutUser, userInfo, isShownLoginForm, showLoginForm } =
+    useContext(AuthContext);
   return (
     <nav className="header-nav">
       <NavLink
@@ -45,13 +48,12 @@ const Header = () => {
             </Button>
           </>
         ) : (
-          <NavLink to="login">
-            <Button variant="contained" size="small">
-              Log In
-            </Button>
-          </NavLink>
+          <Button variant="contained" size="small" onClick={showLoginForm}>
+            Log In
+          </Button>
         )}
       </ul>
+      {isShownLoginForm && <LoginForm />}
     </nav>
   );
 };

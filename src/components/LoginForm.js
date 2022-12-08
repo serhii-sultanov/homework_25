@@ -10,6 +10,8 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 
+import { ReactComponent as CloseIcon } from "../assets/icons/close.svg";
+
 const schema = yup.object({
   username: yup.string().trim().required("Please, enter username").min(3),
   password: yup.string().required().min(4),
@@ -24,20 +26,14 @@ const LoginForm = () => {
     },
   });
 
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser, closeLoginForm } = useContext(AuthContext);
 
   const onSubmit = (credentials) => {
     loginUser(credentials);
   };
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      style={{
-        width: 675,
-        margin: "50px auto",
-      }}
-    >
+    <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
       <Typography variant="h2" color="secondary" mb={1.5}>
         Sign up for Tripma
       </Typography>
@@ -80,6 +76,9 @@ const LoginForm = () => {
       >
         Login
       </Button>
+      <button type="button" onClick={closeLoginForm} className="close-button">
+        <CloseIcon />
+      </button>
     </form>
   );
 };

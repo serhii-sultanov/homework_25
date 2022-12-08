@@ -23,7 +23,7 @@ ul {
 }
 
 li {
-  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .header-nav {
@@ -130,4 +130,16 @@ td {
 .error-code {
   font-size: 36px;
   font-weight: 600;
+}
+
+.loggedin-user {
+  width: 40px;
+  height: 40px;
+  margin-right: 40px;
+  border-radius: 50%;
+  border: 1px solid #E9E8FC;
+}
+
+img {
+  width: 100%;
 }

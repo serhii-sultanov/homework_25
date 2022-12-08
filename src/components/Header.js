@@ -41,7 +41,11 @@ const Header = () => {
         {isLoggedIn ? (
           <>
             <li className="loggedin-user">
-              <img src={userInfo.image} alt={userInfo.firstName} />
+              <img
+                src={userInfo.image}
+                alt={userInfo.firstName}
+                className="loggedin-image"
+              />
             </li>
             <Button variant="outlined" onClick={logoutUser} size="small">
               Log Out
